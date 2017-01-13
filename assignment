@@ -1,0 +1,90 @@
+1) Write a program using string interpolation and a list.
+For example:  if the list is List(10,20,30,40) output should be 
+0 = 10
+1 = 20
+2 = 30
+
+Solution:
+/*
+  logic: processing each element of list using for and printing position and element
+*/
+val list=List(10,20,30,40)
+var index=0;
+for(lst<-list)
+{
+  println(s"$index = $lst") //String InterPolation Using "s"
+ index=index+1;
+}
+
+
+2) Write a program to find the maximum element from list.
+For example: List(1,5,2,9,7)
+Output should be 9
+
+Solution:
+/*
+  logic:Finding maximun in a list using linear approach.	
+*/
+val input = List(1,2,5,7,9)
+var max=input(0)			//Assigning first value as maximum.
+for(value<-input){
+if(max<value)
+max = value
+}
+
+
+3) Write  a program to get the nth Fibonacci number.
+For example: Fibonacci series (0,1,1,2,3,5,8.....)
+if n is 3 then it should return 2
+if n is 4 then it should return 3
+
+Solution:
+/*
+ logic:Finding nth fibonacci by calculation every fibonacci number from start
+*/
+def NthFibonacci(pos: Int):Unit={
+var fib0=0
+var fib1=1
+var fib2=0
+var index=0
+if(pos==0)
+0
+if(pos==1)
+1
+while(i<pos)
+{
+  fib2=fib0+fib1
+  fib0=fib1
+  fib1=fib2
+  index=index+1
+}
+println(fib0)
+}
+
+4) Write a program to sum of the digits of the product of numbers from 1 to n.
+For example: For, n = 5
+1*2*3*4*5 = 120
+1+2+0 = 3 
+
+Solution:
+
+object Example extends App{				
+val input=6
+var product =1 
+var sum=0
+for (i <- 1 to num){				//Find factorial.
+	product=product*i			//Compute product.		
+}
+println(s"Product = $product")
+while(product>0)				//Calculate the sum.
+{
+	sum= sum + product%10			//Add the last digit first in to the sum.
+	product = product/10			//Update the number.
+}
+println(s"sum = $sum")
+}
+
+
+
+
+
